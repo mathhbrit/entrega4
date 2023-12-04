@@ -10,6 +10,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'  # Atualize com a UR
 db.init_app(app)
 
 
+with app.app_context():
+    db.create_all()
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
@@ -42,6 +45,7 @@ def cadastro():
 @app.route('/login')
 def login():
     return render_template('login.html')
+
 
 
 if __name__ == '__main__':
