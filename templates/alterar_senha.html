@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="{{ url_for('alterar_senha') }}">
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha_atual" required><br>
+        <label for="senha">Senha:</label>
+        <input type="password" name="nova_senha" required><br>
+    </form>
+</body>
+</html>
