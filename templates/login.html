@@ -9,5 +9,15 @@
 </head>
 <body>
     <h1>Login</h1>
+
+    <form method="post" action="{{ url_for('login') }}">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" required><br>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" required><br>
+        <input type="submit" value="Login">
+    </form>
+    
+
 </body>
 </html>
